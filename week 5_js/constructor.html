@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script type="text/Javascript">
+     function Rectangle(l,b)
+     {  
+      this.l=l;
+      this.b=b;
+      this.area=function()
+              { 
+               return l*b;
+              }
+     } 
+r1=new Rectangle(4,5);
+console.log(r1.area());/* returns code if () not given*/
+r2=new Rectangle(3,6);
+r2.type="solid rectangle";
+r3=new Rectangle(5,7);
+console.log(r2.type);
+console.log(r3.type);/*r3's type is not defined but it gives undefined. */
+   </script>
+</head>
+<body>
+no use of commas to separate the properties.
+</body>
+</html>

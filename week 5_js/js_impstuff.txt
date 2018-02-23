@@ -1,0 +1,36 @@
+#1
+var x = "John";  // type of x will return String
+var y = new String("John");  // type of y will return Object
+but(x==y) is true as they have the same value!!
+but(x===y) is false !(for it to be true both value & type must be same)
+
+#2
+You can also break up a code line within a text string ,
+with a single backslash:
+document.getElementById("demo").innerHTML = "Hello \
+Dolly!";
+
+#3
+
+strings::
+charAt()  :   Returns the character at the specified index (position)
+charCodeAt()	Returns the Unicode of the character at the specified index
+concat()	Joins two or more strings, and returns a copy of the joined strings
+fromCharCode()	Converts Unicode values to characters
+indexOf()	Returns the position of the first found occurrence of a specified value in a string
+lastIndexOf()	Returns the position of the last found occurrence of a specified value in a string
+localeCompare()	Compares two strings in the current locale
+match()	Searches a string for a match against a regular expression, and returns the matches
+replace()	Searches a string for a value and returns a new string with the value replaced
+search()	Searches a string for a value and returns the position of the match
+slice()	Extracts a part of a string and returns a new string
+split()	Splits a string into an array of substrings
+substr()	Extracts a part of a string from a start position through a number of characters
+substring()	Extracts a part of a string between two specified positions
+toLocaleLowerCase()	Converts a string to lowercase letters, according to the host's locale
+toLocaleUpperCase()	Converts a string to uppercase letters, according to the host's locale
+toLowerCase()	Converts a string to lowercase letters
+toString()	Returns the value of a String object
+toUpperCase()	Converts a string to uppercase letters
+trim()	Removes whitespace from both ends of a string
+valueOf()	Returns the primitive value of a String object

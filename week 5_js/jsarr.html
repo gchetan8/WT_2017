@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script type="text/Javascript">
+    /* var arr=[1,3,4,5,6,"hello",'hi'];
+     var arr1= new Array();
+     var arr2= new Array(10);// checkout the diff between last one & this one
+     var arr3= new Array(5,6,7,'hi');
+      console.log(arr3.toString()); //have to give paranthesis
+      console.log(arr.length);
+      console.log(arr2.length)
+      arr[100]="kick";
+      console.log(arr.length)
+*/   
+var arr = new Array(new Array(3),new Array(4));/*defining a 2d array*/
+console.log(typeof(arr));
+var arr1= [1,2,45,"chetan"];
+console.log(arr1.join(":"));
+var arr2=[1,4,7,9,35];
+console.log(arr1.concat(arr2));
+console.log(arr1.slice(2,4));/*include 1st index & neglect the second one, indexing is same as normal array*/
+console.log(arr2.sort());/*sort based on the first digit*/
+console.log(arr2.sort(compare));
+function compare(a,b)
+{
+return a-b;/*(a-b) ascending order, (b-a)-- descending order*/
+}
+  
+
+</script>
+</head>
+<body>
+length is a property so no need of parathesis.</br>
+but be cautious while defining a new array.
+<br/>
+try out join,reverse,sort,concat,slice &2d arr..
+</body>
+</html>

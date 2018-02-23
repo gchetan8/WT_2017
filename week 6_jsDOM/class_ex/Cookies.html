@@ -1,0 +1,38 @@
+<!DOCTYYPE HTML>
+<html>
+	<head>
+		<script>
+		
+		console.log("begin"+document.cookie);
+		/*var d=new Date();
+		d.setMonth(d.getMonth()-1);
+		document.cookie="name=;expires="+d.toUTCString()+';'*/
+		
+		
+		if(document.cookie){
+				console.log("reading cookie");
+				var cookie=document.cookie;
+				console.log(document.cookie);
+				var arr=cookie.split(";");
+				var arr2=arr[0].split("=");
+				var name=arr2[1]
+				document.writeln("Hello"+name);
+
+			
+		}
+		else{
+				var d=new Date();
+				d.setTime(d.getTime()+3*60*60);
+				var exp=d.toUTCString();
+				document.cookie="name=vidhu;expires="+exp+";"
+
+				console.log(document.cookie);
+		}
+		</script>
+	</head>
+	<body>
+
+	</body>
+
+
+</html>

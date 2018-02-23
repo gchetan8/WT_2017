@@ -1,0 +1,46 @@
+#the spacing between the letters
+letter-spacing: 3px;--increase the spaces b/w the characters
+letter-spacing: -3px;-- decrease the spaces b/w the characters
+
+#the spacing between the lines of the paragraph:
+line-height: 70%;--decreases the spaces between the lines of the paragraph
+line-height: 200%;--increases the spaces between the lines of the paragraph
+
+#word spacing;
+   word-spacing: 30px;--increases the white spaces between the words.
+#css fonts!!
+list-style-image:--uses image as the bullets in the list
+list-style-type: circle;--makes bullets circular.
+
+#table
+border-collapse: collapse;--used in tables to destroy inner borders of the table.
+height ,width can be given in poxels or in % accordingly.
+use text-align to change the position oif the text.
+To control the space between the border and content in a table, use the padding property on <td> and <th> elements:
+padding values are given in pixels.
+we can use background-color,or directly give it in --border:10px green;
+
+#imp stuff
+Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+
+#border:
+!!any change in border doesn't occur untill border-style  is used.!!
+border: 5px solid red;--sets a border of 5px of solid type red in color.
+each line of border can also be set by giving:
+border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+#margin:
+The margin clears an area around an element (outside the border).
+similar to border.
+
+#to change the block of the element:
+li {
+    display: inline;
+}
+##display: block --- Displaying the links as block elements makes the whole link area clickable (not just the text),
+ and it allows us to specify the width

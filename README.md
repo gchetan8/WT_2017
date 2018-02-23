@@ -1,2 +1,2 @@
 # WT_2017
-wt
+This is a repository for the webtech course at PES University in 2017.

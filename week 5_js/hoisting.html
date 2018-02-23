@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script type="text/Javascript">
+    /* console.log(whatever);
+     var whatever="Hello";
+ 
+due to hoisting it looks like-->
+ var whatever;
+ console.log(whatever)//prints undefined.
+ whatever="exists"//now it gets assigned.
+*/
+
+test();
+b();
+function test(){
+console.log("hello");}
+var b = function(){
+console.log("can i be hoisted?");
+ }
+   </script>
+</head>
+<body>
+hoisting</br>
+process of shifting the declarations to the top is called hoisting.
+</body>
+</html>

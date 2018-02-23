@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<style>
+			div{
+			   width:270px;
+			   height:60px;
+			   border:solid 1px lightblue;
+			
+			}
+								
+			img{
+			
+			  display:inline;
+			  height:50px;
+			  width:50px;
+			  margin 2px;
+			}
+		#menu{
+			display:none;
+			height:100px;
+			width:100px;
+			position:absolute;
+		}
+		#task{
+
+			height:100px;
+			width:100px;
+			position:absolute;
+		}
+		</style>
+	
+	
+	</head>
+	
+	<body>
+		<div id="abc">
+		<img src="star_off.png" id="star_0"/>
+		<img src="star_off.png" id="star_1"/>
+		<img src="star_off.png" id="star_2"/>
+		<img src="star_off.png" id="star_3"/>
+		<img src="star_off.png" id="star_4"/>
+		<div id="menu">
+			<div id="task">Task</div>
+		</div>
+		
+		</div>
+
+		<script>
+			var obj={
+			stars:document.querySelectorAll("[src='star_off.png']"),
+				register:function(){
+			document.body.addEventListener("contextmenu",obj.show,false);
+			for(var i=0;i<obj.stars.length;i++){
+			obj.stars[i].addEventListener("mouseover",obj.glow,false);
+			obj.stars[i].addEventListener("mouseout",obj.unglow,false);
+			obj.stars[i].addEventListener("click",obj.rate,false);
+			obj.stars[i].addEventListener("dblclick",obj.unrate,false);
+				}
+				
+			},
+			show:function(e){
+				e.preventDefault();
+				console.log("menu");
+				var menu=document.getElementById("menu");
+				menu.style.display="block";
+				menu.style.left=e.clientX;
+				menu.style.top=e.clientY;
+				
+			
+			},
+			glow:function(e){
+				e.target.src="star_on.png"
+				var index=obj.getIndex(e.target)
+				for(var i=0;i<index;i++){
+					obj.stars[i].src="star_on.png"
+				}
+			
+			},
+			unglow:function(e){
+				var index=obj.getIndex(e.target)
+				for(var i=0;i<=index;i++){
+					obj.stars[i].src="star_off.png"
+				}
+			},
+			rate:function(e){
+			
+				var index=obj.getIndex(e.target)
+				for(var i=0;i<=index;i++){
+					obj.stars[i].src="star_on.png"
+				}
+				for(var i=0;i<obj.stars.length;i++){
+					obj.stars[i].removeEventListener("mouseover",obj.glow,false)
+					obj.stars[i].removeEventListener("click",obj.rate,false)
+					obj.stars[i].removeEventListener("mouseout",obj.unglow,false)
+					
+				
+				}
+			},
+			unrate:function(e){
+			
+				var index=obj.getIndex(e.target)
+				for(var i=0;i<=index;i++){
+					obj.stars[i].src="star_off.png"
+				}
+				for(var i=0;i<obj.stars.length;i++){
+					obj.stars[i].addEventListener("mouseover",obj.glow,false)
+					obj.stars[i].addEventListener("click",obj.rate,false)
+					obj.stars[i].addEventListener("mouseout",obj.unglow,false)
+				
+				}
+			},	
+			getIndex:function(star){
+					for(var i=0;i<obj.stars.length;i++){
+						if(star.id==obj.stars[i].id){
+							return i;
+						}
+					}
+					return -1;
+			}
+			
+			}	
+			obj.register();	
+		</script>
+	
+	
+	</body>
+
+
+
+
+</html>

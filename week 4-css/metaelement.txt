@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<meta name="description" content="this is web page about fish."/><!--only 155 characters allowed & is put on browsers-->
+<meta name="keywords" content="fish, ocean,aquarium"/><!--most of the search engines don't us it now-->
+<meta http-equiv="author" content="helo"/>
+<meta http-equiv="content-language" content="en-us" >
+</head>
+<body>
+
+</body>
+
+</html>

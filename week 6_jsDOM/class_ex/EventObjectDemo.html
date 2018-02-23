@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<input type="button" id="btn" value="click here"/>
+	</body>
+	<script>
+		var btn=document.getElementById("btn");
+		
+		var obj={
+		
+		test:function(e){
+			console.log(e);
+			console.log(e.target);
+			console.log(this);
+			alert("hello");
+			
+			
+		}
+			
+		}
+		btn.addEventListener("click",obj.test,false);
+	</script>
+
+
+</html>
